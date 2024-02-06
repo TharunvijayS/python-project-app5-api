@@ -15,7 +15,7 @@ content=request.json()
 
 # Access the particular title and the description
 body=""
-for article in content["articles"]:
+for article in content["articles"][:20]:
      if article["author"] is not None:
        body=(body + article["title"] + "\n"
              + article["description"]
