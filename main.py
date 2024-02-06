@@ -1,19 +1,19 @@
 import requests
 from send_email import send_email
 
-topic="tesla"
-api_key="74e165b25acb49b3abc6f15769de2bc4"
-url="https://newsapi.org/v2/everything?"\
+topic = "tesla"
+api_key = "74e165b25acb49b3abc6f15769de2bc4"
+url = "https://newsapi.org/v2/everything?"\
      f"q={topic}&"\
      "from=2024-01-05&sortBy=publishedAt&" \
      "apiKey=74e165b25acb49b3abc6f15769de2bc4&"\
     "language=en"
 
 # make request
-request=requests.get(url)
+request = requests.get(url)
 
 # get the dictionary with data
-content=request.json()
+content = request.json()
 
 # Access the particular title and the description
 body = ""
